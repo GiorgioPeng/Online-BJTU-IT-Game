@@ -21,9 +21,18 @@
     <input type='hidden' name='key' value="key:5oiW6K645piv56ys5Zub5Liqa2V5"/>
     <input type = 'submit' value="提交"/>
 </form>
+<script>
+window.onload = ()=>{
+  document.querySelector('input[type="text"]').focus();
+}
+</script>
 <?php
   if($_GET["name"]=='php'){
     echo '<div>恭喜你通关了,记得仰望一下</div>';
+  }
+  else{
+    if(!empty($_GET["name"]))
+      echo '<div>大哥们儿，再想想吧</div>';
   }
 ?>
 </body>
